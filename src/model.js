@@ -1,5 +1,5 @@
 import image from './assets/image.png'
-import {Block, TitleBlock} from './classes/blocks'
+import {TitleBlock, ImageBlock, TextBlock, TextColumsBlock} from './classes/blocks'
 const text = `
 This site were create by the lessons of <a href="https://youtube.com/c/VladilenMinin" target="_blank">Vladilen Minin</a>.
 `
@@ -9,15 +9,15 @@ export const model = [
     tag: 'h2',
     styles: 'background: linear-gradient(to left, #ffc7e6, #493240);color: #fff;text-align:center;'
   }),
-  new Block('image', image, {
+  new ImageBlock(image, {
     styles:'padding: 0 0; display: flex; justify-content: left;',
     alt: 'my image',
     imageStyles: 'width: 300px; height: auto'
   }),
-  new Block('text', text, {
+  new TextBlock(text, {
     styles: 'background: linear-gradient(to left, #fefefe, #787878); color: black;text-align:right;height:20px'
   }),
-  new Block('textColumns', [
+  new TextColumsBlock([
     'You can use this constructor to create your own site',
     'This constructor created with pure JS, with OOP and SOLID principles',
     '1 step: choose and add elements; <br>2 step: click the button; <br>3 step: enjoy'
