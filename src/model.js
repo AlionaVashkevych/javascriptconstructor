@@ -1,5 +1,7 @@
 import image from './assets/image.png'
 import {TitleBlock, ImageBlock, TextBlock, TextColumsBlock} from './classes/blocks'
+import {css} from './utils'
+
 const text = `
 This site were create by the lessons of <a href="https://youtube.com/c/VladilenMinin" target="_blank">Vladilen Minin</a>.
 `
@@ -7,8 +9,14 @@ This site were create by the lessons of <a href="https://youtube.com/c/VladilenM
 export const model = [
   new TitleBlock('The constructor of sites on pure JS', {
     tag: 'h2',
-    styles: 'background: linear-gradient(to left, #ffc7e6, #493240);color: #fff;text-align:center;'
-  }),
+    styles: css({
+      background: 'linear-gradient(to left, #ffc7e6, #493240)',
+      color: '#fff',
+      paddind: '1.5rem',
+      'text-align': 'center'
+  
+    })
+}),
   new ImageBlock(image, {
     styles:'padding: 0 0; display: flex; justify-content: left;',
     alt: 'my image',
